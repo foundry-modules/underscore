@@ -1219,4 +1219,9 @@
 
   });
 
+  $.extend($, {
+    isBoolean: _.isBoolean,
+    isString: _.isString
+  });
+
 }).call($);
