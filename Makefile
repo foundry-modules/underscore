@@ -1,11 +1,7 @@
+all: wrap-core minify
+
 include ../../build/modules.mk
 
 MODULE = underscore
-FILENAME = ${MODULE}.js
-SOURCE = ${MODULE}.js
-PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
-DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}
-
-all:
-	${WRAP} -c ${SOURCE} > ${DEVELOPMENT}
-	${UGLIFYJS} ${DEVELOPMENT} > ${PRODUCTION}
+FILENAME_PREFIX = 
+SOURCE_DIR = .
